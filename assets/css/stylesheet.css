@@ -1,1 +1,29 @@
+body {
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    background-image: url(/Users/zee/Desktop/projects/Repos/quiz-timer/assets/Avengers.png);
+}
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+}
+h1 {
+    font-size: 67;
+}
+
+.button {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background-color: #e2f2d5;
+}
+
+#questions-answers-feedback {
+    color: #ededfa;
+}
+
+#loseMessage {
+    font-size: 74px;
+}

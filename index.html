@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Import Bootstrap CDN -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!--google apistyle-->
+    <link href="https://fonts.googleapis.com/css?family=Archivo:700|PT+Serif" rel="stylesheet">
+    <!--regular style sheet-->
+    <link rel="stylesheet" href="assets/css/stylesheet.css" <!-- Import Bootstrap CDN -->
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -20,16 +23,16 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-6" id="high-scores">
+        <div class="row text-center">
+            <div class="col-lg-6 text-center" id="high-scores">
                 <h1> View High Scores</h1>
             </div>
-            <div class="col-lg-6" id="timer">
+            <div class="col-lg-6 text-center" id="timer">
                 <h1>Timer</h1>
             </div>
         </div>
-        <div class="row"></div>
-        <div class="col-lg-12" id="questions-answers-feedback">
+        <div class="row text-center"></div>
+        <div class="col-lg-12 text-center" id="questions-answers-feedback">
             <h1>Questions</h1>
             <h2 id=question-variable> </h2>
             <div id="answer-buttons">
@@ -45,15 +48,14 @@
                     <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at
                         eros</button>
                 </div>
-                <div id="feedback">
-                    <p> this is something</p>
+                <div id="feedback" <p> this is something</p>
+                </div>
+                <div id="loseMessage">
+                    <h3></h3>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    <div id="loseMessage">
-        <p></p>
     </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

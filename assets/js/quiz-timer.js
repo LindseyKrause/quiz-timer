@@ -26,7 +26,7 @@ var startQuiz = function () {
 }
 // begin countdown
 var startTimer = function () {
-    var timeLeft = 123;
+    var timeLeft = 5;
     // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
     var timeInterval = setInterval(function () {
         // As long as the `timeLeft` is greater than 1
@@ -61,7 +61,7 @@ var timesUp = function () {
             timesUpParaEl.textContent = words[wordCount];
             wordCount++;
         }
-    }, 300);
+    }, 2000);
 }
 
 // grab item from var avengersQuestions for loop?
