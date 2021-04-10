@@ -5,40 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Import Bootstrap CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <title>Avengers Assemble (Your Knowledge)</title>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col" id="high-scores">
+            <div class="col-lg-6" id="high-scores">
                 <h1> View High Scores</h1>
             </div>
-            <div class="container">
-                <div class="col" id="questions-answers-feedback">
-                    <h1>Questions</h1>
-                    <h2 id=question-variable> </h2>
-                    <div id="answer-buttons">
-                        <button ""></button>
-                        <button ""></button>
-                        <button ""></button>
-                        <button ""></button>
-                    </div>
-                    <div id="feedback">
-                        <p> this is something</p> 
-                    </div>
-                </div>
+            <div class="col-lg-6" id="timer">
+                <h1>Timer</h1>
             </div>
-            <div class="container">
-                <div class="col" id="timer">
-                    <h1>Timer</h1>
+        </div>
+        <div class="row"></div>
+        <div class="col-lg-12" id="questions-answers-feedback">
+            <h1>Questions</h1>
+            <h2 id=question-variable> </h2>
+            <div id="answer-buttons">
+                <div class="list-group">
+                    <button type="button" class="list-group-item list-group-item-action active">
+                        Cras justo odio
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis
+                        in</button>
+                    <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
+                    <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur
+                        ac</button>
+                    <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at
+                        eros</button>
+                </div>
+                <div id="feedback">
+                    <p> this is something</p>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
+    <div id="loseMessage">
+        <p></p>
+    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -49,8 +65,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        <!-- read in javascript file -->
-<script src="assets/js/avengersquiz-questions-answers.js"></script>
+    <!-- read in javascript file -->
+    <script src="assets/js/avengersquiz-questions-answers.js"></script>
+    <script src="assets/js/quiz-timer.js"></script>
 </body>
 
 </html>
