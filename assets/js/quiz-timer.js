@@ -1,5 +1,6 @@
 var allScores = [];
 var highScores = [];
+var userScore = 0;
 var body = document.body;
 var h1El = document.createElement('h1');
 var timerEl = document.getElementById('timer');
@@ -10,7 +11,8 @@ var timesUpParaEl = document.getElementById('loseMessage');
 var timerEl = document.getElementById('timer');
 let questionIndex = 0;
 let i = 0;
-
+let currentQuestion = avengersQuestions[questionIndex];
+var buttonEl = document.getElementById("buttons");
 
 
 // Ask if ready to begin quiz 
@@ -69,22 +71,27 @@ var timesUp = function () {
 
 // grab item from var avengersQuestions for loop?
 function presentQuestion() {
-    let currentQuestion = avengersQuestions[questionIndex];
     console.log(currentQuestion.question);
     let titleEl = document.getElementById("question-title");
     titleEl.textContent = currentQuestion.question;
     let currentChoices = currentQuestion.choices;
-    var buttonEl = document.getElementById ("buttons");
     for (var i = 0; i < currentChoices.length; i++) {
-    var createButtonEl = document.createElement("button");
-    createButtonEl.textContent = currentChoices[i];
-    buttonEl.appendChild(createButtonEl);
-    console.log(createButtonEl);
+        var createButtonEl = document.createElement("button");
+        createButtonEl.textContent = currentChoices[i];
+        buttonEl.appendChild(createButtonEl);
+        console.log(createButtonEl);
+    }
 }
+var answerButton = currentQuestion.answer;
+var answerButtonHandler = function (event) {
+    var targetButton = event.target;
+    console.log("targetButton");
+    if (targetButton === answerButton)
 }
 
+// var userInput = EventTarget;
 // if input = answer then write Hooray! if input does not equal answer then var deduct time
-var evaluateAnswer = function () {
+evaluateAnswer = function () {
 
 }
 // remove penalty for time and then go to present questions
@@ -105,3 +112,4 @@ var highScoresCalc = function () {
 }
 startQuiz();
 startTimer();
+buttonEl.addEventListener("click", answerButtonHandler);

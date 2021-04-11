@@ -7,9 +7,9 @@ var avengersQuestions = [
         answer: "kitten"
     },
     {
-        question: "",
-        choices: "",
-        answer: ""
+        question: "How many women superheros are there?",
+        choices: ["1", "6", "7", "0"],
+        answer: "6"
     },
     {
         question: "",
