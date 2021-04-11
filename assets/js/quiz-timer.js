@@ -8,6 +8,8 @@ var timesUpMessage =
 var words = timesUpMessage.split(' ');
 var timesUpParaEl = document.getElementById('loseMessage');
 var timerEl = document.getElementById('timer');
+let questionIndex = 0;
+let i = 0;
 
 
 
@@ -18,11 +20,12 @@ var startQuiz = function () {
     if (startQuizConfirm) {
         h1El.textContent = "Avengers Assemble!";
         body.appendChild(h1El);
+        presentQuestion();
         startTimer;
     } else {
         window.alert("I am inevitable");
     }
-
+    console.log(startQuiz);
 }
 // begin countdown
 var startTimer = function () {
@@ -48,7 +51,7 @@ var startTimer = function () {
             timesUp();
         }
     }, 1000);
-console.log(startTimer);
+    console.log(startTimer);
 }
 //Tell user that Thanos has snapped
 var timesUp = function () {
@@ -65,9 +68,21 @@ var timesUp = function () {
 }
 
 // grab item from var avengersQuestions for loop?
-var presentQuestion = function () {
-
+function presentQuestion() {
+    let currentQuestion = avengersQuestions[questionIndex];
+    console.log(currentQuestion.question);
+    let titleEl = document.getElementById("question-title");
+    titleEl.textContent = currentQuestion.question;
+    let currentChoices = currentQuestion.choices;
+    var buttonEl = document.getElementById ("buttons");
+    for (var i = 0; i < currentChoices.length; i++) {
+    var createButtonEl = document.createElement("button");
+    createButtonEl.textContent = currentChoices[i];
+    buttonEl.appendChild(createButtonEl);
+    console.log(createButtonEl);
 }
+}
+
 // if input = answer then write Hooray! if input does not equal answer then var deduct time
 var evaluateAnswer = function () {
 

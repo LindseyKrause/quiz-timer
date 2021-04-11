@@ -1,8 +1,10 @@
+
+
 var avengersQuestions = [
     {
-        question: "",
-        choices: "",
-        answer: ""
+        question: "What is hulk's first pet?",
+        choices: ["lizard", "kitten", "dog", "fish"],
+        answer: "kitten"
     },
     {
         question: "",
