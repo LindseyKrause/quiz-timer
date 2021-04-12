@@ -21,9 +21,4 @@ var avengersQuestions = [
         choices: "",
         answer: ""
     },
-    {
-        question: "",
-        choices: "",
-        answer: ""
-    },
 ]
