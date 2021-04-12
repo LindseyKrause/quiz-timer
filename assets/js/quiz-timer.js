@@ -16,7 +16,7 @@ let buttonEl = document.getElementById("buttons");
 let timeLeft = 30;
 let titleEl = document.getElementById("question-title");
 let createButtonEl = document.createElement("button");
-
+let quizContainer = document.getElementById("quizContainer");
 
 // Ask if ready to begin quiz 
 // if confirm then start timer and present question else "ok leave"
@@ -68,6 +68,7 @@ let timesUp = function () {
             wordCount++;
         }
     }, 2000);
+    endGame();
 }
 
 // grab item from let avengersQuestions for loop?
@@ -124,17 +125,31 @@ console.log(userScore);
 
 
 // // present this screen if user runs out of time or has answered all the questions.  Enter name. 
-// let endGame = function () {
-//     console.log("endgame has started");
-//     let quizContainer = getElementById('quizContainer');
-//     quizContainer.remove();
-//     clearInterval(timer);
-//     //INPUT SCORE SCREEN
-//     h1El.textContent = "TIMES UP!";
-//     body.appendChild(h1El);
-//     console.log("endgame?");
+let endGame = function () {
+    console.log("endgame has started");
+    quizContainer.remove();
+    clearInterval(timer);
+    h1El.textContent = "TIMES UP!";
+    body.appendChild(h1El);
+    console.log("endgame?");
+    //INPUT SCORE SCREEN
+    // divForm = document.createElement("div", id = "divForm");
+    let form = document.createElement("form");
+    var getForm = document.getElementsByTagName("form");
+    h1El.textContent = "Your Score is  " + userScore;
+    var userNameInput = document.createElement("input");
+    // Create an input element for Full Name
+    userNameInput.setAttribute("type", "text");
+    userNameInput.setAttribute("name", "Your Name");
+    userNameInput.setAttribute("placeholder", "Your Name");
+form.appendChild(userNameInput);
+body.appendChild(form);
+var userNameSubmit = document.createElement("button");
+userNameSubmit.innerHTML = "Submit Score";
+form.appendChild(userNameSubmit);
 
-// }
+
+}
 
 
 

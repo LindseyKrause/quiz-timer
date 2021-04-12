@@ -12,13 +12,13 @@ var avengersQuestions = [
         answer: "6"
     },
     {
-        question: "",
-        choices: "",
-        answer: ""
+        question: "What does js stand for?",
+        choices: ["javasoap", "javapen", "javascript", "javascrit"],
+        answer: "javascript"
     },
     {
-        question: "",
-        choices: "",
-        answer: ""
+        question: "Javascript is a deprecated language. Is this statement: ",
+        choices: ["true", "false", "annoying", "cringe-worthy"],
+        answer: "false"
     },
 ]
