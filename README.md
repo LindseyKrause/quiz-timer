@@ -19,7 +19,7 @@ Interactive Timed Quiz.  Created to practice javascript and dynamically created 
 * Bootstrap
 
 ## Website
-
+https://lindseykrause.github.io/quiz-timer/
 
 ## Issues
 -App still needs local storage functionality to store user names, scores, and calculation for high score.
